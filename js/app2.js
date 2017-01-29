@@ -10,7 +10,7 @@ var chipsView = new App.Views.Chips({collection:chips});
 $("#board").append(chipsView.render().el);
 
 
-//functions to add bets, spin, change bet amount
+//functions to add bets, spin
 
 function onAddChip(event,bet){
   // bet is a single chip on board - can represent up to 18 bets
@@ -66,17 +66,6 @@ function onSpinWheel(){
   chips.reset();
   betsList.reset();
 }
-
-// Moved to event in view
-function onIncBet(){
-  bankInst.incBet();
-}
-
-// Moved to event in view
-function onDecBet(){
-  bankInst.decBet();
-}
-
 
 
 //functions

@@ -110,11 +110,13 @@ App.Views.Bank = Backbone.View.extend({
   },
   onIncBet: function(){
     //console.log('inc bet clicked');
-    window.onIncBet();
+    this.model.incBet();
+    
   },
-    onDecBet: function(){
+  onDecBet: function(){
     //console.log('dec bet clicked');
-    window.onDecBet();
+    this.model.decBet();
+
   },
   className: 'bank-display',
   template: _.template($("#bank-container").html()),
